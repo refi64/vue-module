@@ -32,7 +32,7 @@ In *index.html*:
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('WebComponentsReady', function() {
         new Vue({el: '#example-app'})
       });
     </script>

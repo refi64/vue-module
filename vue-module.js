@@ -12,7 +12,7 @@ window.VueModule = function(Vue, options) {
 
   Vue.module = function (name, opts) {
     var root = document.currentScript.ownerDocument;
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('WebComponentsReady', function () {
       Vue.moduleRooted(root, name, opts);
     });
   };
