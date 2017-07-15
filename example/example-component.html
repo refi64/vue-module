@@ -1,0 +1,15 @@
+<vue-module id="example-component">
+  <!-- Or: -->
+  <!-- <div vue-module="example-component"> -->
+  <template>
+    <p>{{message}}</p>
+  </template>
+
+  <script>
+    Vue.module('example-component', {
+      data: function() {
+        return { message: 'Hello!' };
+      }
+    });
+  </script>
+</vue-module>

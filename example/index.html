@@ -1,0 +1,23 @@
+<head>
+  <script src="https://unpkg.com/vue"></script>
+  <!-- Load vue-module.js -->
+  <script src="../vue-module.js"></script>
+  <script src="https://cdn.jsdelivr.net/webcomponentsjs/0.7.24/webcomponents-lite.min.js"></script>
+
+  <!-- Register vue-module  -->
+  <script> Vue.use(VueModule); </script>
+  <!-- Load our example component -->
+  <link rel="import" href="example-component.html">
+</head>
+
+<body>
+  <div id="example-app">
+    <example-component></example-component>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      new Vue({el: '#example-app'})
+    });
+  </script>
+</body>

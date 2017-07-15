@@ -1,0 +1,10 @@
+{
+  "name": "vue-module",
+  "main": "vue-module.js",
+  "authors": [
+    "Ryan Gonzalez <rymg19@gmail.com>"
+  ],
+  "description": "Define Vue components using a web components-like syntax.",
+  "license": "MIT",
+  "homepage": "https://github.com/kirbyfan64/vue-module.git"
+}
