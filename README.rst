@@ -4,7 +4,7 @@ vue-module
 Define Vue components using a web components-like syntax. See the ``example``
 for more info.
 
-You'll likely need to first import ``webcomponents-lite.js``, which can be
+You'll likely need to first load ``webcomponents-lite.js``, which can be
 found `here <https://github.com/webcomponents/webcomponentsjs>`_.
 
 Quick demo
@@ -53,7 +53,33 @@ In *example-component.html*:
       Vue.module('example-component', {
         data: function() {
           return { message: 'Hello!' };
-        }
+        },
+
+        // If you need to use v-once, then add:
+        once: true,
       });
+    </script>
+  </vue-module>
+
+Styling
+*******
+
+When you use *vue-module*, your elements are automatically wrapped in a div with a class the
+same name as your component. For example:
+
+.. code-block:: html
+
+  <vue-module id="my-component">
+    <!-- Styling goes here! -->
+    <style>
+    .my-component p { color: purple; }
+    </style>
+
+    <template>
+      <p>My module!</p>
+    </template>
+
+    <script>
+      Vue.module('my-component');
     </script>
   </vue-module>
