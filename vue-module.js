@@ -6,7 +6,8 @@ window.VueModule = function(Vue, options) {
     if (!tmpl)
       throw new Error('failed to locate vue-module template: ' + name);
 
-    opts.template = '<div>' + tmpl.innerHTML + '</div>';
+    var attrs = opts.once ? 'v-once' : '';
+    opts.template = '<div ' + attrs + ' class="' + name + '">' + tmpl.innerHTML + '</div>';
     Vue.component(name, opts);
   };
 
